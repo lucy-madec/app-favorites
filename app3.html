@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Songkick</title>
 </head>
 <body>
     <header>
-        <h1>Songkick</h1>
-        <p>Ne manquez jamais un concert de vos artistes préférés.</p>
+        <div class="header-content">
+            <div class="logo-section">
+                <h1><img src="images/songkick-logo.png" alt="Songkick Logo" class="app-logo"> Songkick</h1>
+                <p>Ne manquez jamais un concert de vos artistes préférés.</p>
+            </div>
+            <div class="navigation">
+                <a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Accueil</a>
+                <a href="app2.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Shazam</a>
+            </div>
+        </div>
     </header>
 
     <section>
@@ -23,25 +35,54 @@
         <p>Songkick est votre compagnon ultime pour ne jamais manquer un concert de vos artistes préférés. Découvrez les prochains événements musicaux près de chez vous, suivez vos artistes préférés, et soyez informé des dates de tournée en temps réel. Avec Songkick, plongez dans l'expérience live de la musique et créez des souvenirs inoubliables avec vos amis.</p>
 
         <div class="download-links">
-            <a href="https://play.google.com/store/apps/details?id=com.songkick&hl=fr&gl=US" target="_blank">Télécharger sur Google Play</a>
-            <a href="https://apps.apple.com/fr/app/songkick-concerts/id438690886" target="_blank">Télécharger sur l'App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.songkick&hl=fr&gl=US" target="_blank" class="download-btn">
+                <i class="fab fa-google-play"></i> Télécharger sur Google Play
+            </a>
+            <a href="https://apps.apple.com/fr/app/songkick-concerts/id438690886" target="_blank" class="download-btn">
+                <i class="fab fa-apple"></i> Télécharger sur l'App Store
+            </a>
         </div>
     </section>
 
     <section>
         <h2>Suivez Songkick sur les réseaux sociaux</h2>
         <ul class="social-links">
-            <li><a href="https://www.tiktok.com/@songkick?lang=fr" target="_blank"><img src="images/tiktok-logo.png" alt="tiktok icone"></a></li>
-            <li><a href="https://www.instagram.com/songkick/?hl=fr" target="_blank"><img src="images/instagram-logo.png" alt="instagram logo"></a></li>
-            <li><a href="https://twitter.com/songkick" target="_blank"><img src="images/x-logo.png" alt="x logo"></a></li>
+            <li><a href="https://www.tiktok.com/@songkick?lang=fr" target="_blank"><img src="images/tiktok-logo.png" alt="TikTok Logo" class="social-icon"> TikTok</a></li>
+            <li><a href="https://www.instagram.com/songkick/?hl=fr" target="_blank"><img src="images/instagram-logo.png" alt="Instagram Logo" class="social-icon"> Instagram</a></li>
+            <li><a href="https://twitter.com/songkick" target="_blank"><img src="images/x-logo.png" alt="X Logo" class="social-icon"> X</a></li>
         </ul>
     </section>
 
     <footer>
-        <div class="change-page">
-            <a href="app2.html"><img src="images/icone-flèche-gauche.png" alt="icone flèche gauche"> Shazam</a>
-            <a href="index.html">Accueil <img src="images/icone-retour.png" alt="flèche icone retour"></a>
-        </div>
+        <p>&copy; 2023 Songkick. Tous droits réservés.</p>
     </footer>
+    
+    <button id="back-to-top" class="back-to-top" title="Retour en haut de page">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Script pour le bouton de retour en haut de page
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            // Afficher le bouton lorsque l'utilisateur descend de 300px
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            // Remonter en haut de page lorsque le bouton est cliqué
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

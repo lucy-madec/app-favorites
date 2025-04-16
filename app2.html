@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Shazam</title>
 </head>
 <body>
     <header>
-        <h1>Shazam</h1>
-        <p>Découvrez la musique qui vous entoure.</p>
+        <div class="header-content">
+            <div class="logo-section">
+                <h1><img src="images/shazam-logo.png" alt="Shazam Logo" class="app-logo"> Shazam</h1>
+                <p>Découvrez la musique qui vous entoure.</p>
+            </div>
+            <div class="navigation">
+                <a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Accueil</a>
+                <a href="app1.html" class="nav-btn"><i class="fas fa-arrow-left"></i> YouTube Music</a>
+                <a href="app3.html" class="nav-btn"><i class="fas fa-arrow-right"></i> Songkick</a>
+            </div>
+        </div>
     </header>
 
     <section>
@@ -24,26 +37,54 @@
         <p>En plus de l'identification de chansons, Shazam propose des fonctionnalités telles que la création de listes de lecture, la recherche d'artistes et la découverte de nouvelles tendances musicales. Téléchargez Shazam dès maintenant et ne passez jamais à côté d'une chanson que vous aimez.</p>
 
         <div class="download-links">
-            <a href="https://play.google.com/store/apps/details?id=com.shazam.android&hl=fr&gl=US" target="_blank">Télécharger sur Google Play</a>
-            <a href="https://apps.apple.com/fr/app/shazam-identifier-la-musique/id284993459" target="_blank">Télécharger sur l'App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.shazam.android&hl=fr&gl=US" target="_blank" class="download-btn">
+                <i class="fab fa-google-play"></i> Télécharger sur Google Play
+            </a>
+            <a href="https://apps.apple.com/fr/app/shazam-identifier-la-musique/id284993459" target="_blank" class="download-btn">
+                <i class="fab fa-apple"></i> Télécharger sur l'App Store
+            </a>
         </div>
     </section>
 
     <section>
         <h2>Suivez Shazam sur les réseaux sociaux</h2>
         <ul class="social-links">
-            <li><a href="https://www.tiktok.com/@shazam?lang=fr" target="_blank"><img src="images/tiktok-logo.png" alt="tiktok icone"></a></li>
-            <li><a href="https://www.instagram.com/shazam/?hl=fr" target="_blank"><img src="images/instagram-logo.png" alt="instagram logo"></a></li>
-            <li><a href="https://twitter.com/Shazam" target="_blank"><img src="images/x-logo.png" alt="x logo"></a></li>
+            <li><a href="https://www.tiktok.com/@shazam?lang=fr" target="_blank"><img src="images/tiktok-logo.png" alt="TikTok Logo" class="social-icon"> TikTok</a></li>
+            <li><a href="https://www.instagram.com/shazam/?hl=fr" target="_blank"><img src="images/instagram-logo.png" alt="Instagram Logo" class="social-icon"> Instagram</a></li>
+            <li><a href="https://twitter.com/Shazam" target="_blank"><img src="images/x-logo.png" alt="X Logo" class="social-icon"> X</a></li>
         </ul>
     </section>
 
     <footer>
-        <div class="change-page">
-            <a href="app1.html"><img src="images/icone-flèche-gauche.png" alt="icone flèche gauche"> YouTube Music</a>
-            <a href="index.html">Accueil</a>
-            <a href="app3.html">Songkick <img src="images/icone-flèche-droite.png" alt="icone flèche droite"></a>
-        </div>
+        <p>&copy; 2023 Shazam. Tous droits réservés.</p>
     </footer>
+    
+    <button id="back-to-top" class="back-to-top" title="Retour en haut de page">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Script pour le bouton de retour en haut de page
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            // Afficher le bouton lorsque l'utilisateur descend de 300px
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            // Remonter en haut de page lorsque le bouton est cliqué
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
