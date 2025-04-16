@@ -41,7 +41,7 @@ header {
 }
 
 .site-logo-large {
-    height: 80px;
+    height: 120px;
     width: auto;
     margin: 0 auto;
     display: block;
@@ -75,9 +75,10 @@ body.dark-theme header {
 
 #applications {
     padding: 40px 20px;
-    margin-bottom: 60px;
     max-width: 1200px;
-    margin: 0 auto 60px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .section-title {
@@ -280,8 +281,9 @@ footer {
     padding: 10px;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     transition: background-color 0.3s ease;
 }
 
