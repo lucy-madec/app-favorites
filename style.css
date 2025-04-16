@@ -4,6 +4,13 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode sombre */
+body.dark-theme {
+    background-color: #222;
+    color: #f4f4f4;
 }
 
 header {
@@ -11,6 +18,38 @@ header {
     color: #fff;
     text-align: center;
     padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Geologica', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme header {
+    background-color: #1a1a1a;
 }
 
 #applications {
@@ -30,6 +69,12 @@ article {
     padding: 20px;
     margin: 10px;
     text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-theme article {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 a{
@@ -38,7 +83,8 @@ a{
     color: white;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 16px rgba(0,0,0,0.1)
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
 a:hover{
@@ -54,4 +100,9 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme footer {
+    background-color: #1a1a1a;
 }
