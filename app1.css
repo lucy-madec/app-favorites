@@ -32,16 +32,10 @@ header {
     margin-bottom: 5px;
 }
 
-.logo-section h1 i.fa-music {
-    color: #FF0000;
-    margin-right: 5px;
-    font-size: 0.8em;
-    position: relative;
-    top: -2px;
-}
-
-.logo-section h1 i.fa-youtube {
-    color: #FF0000;
+.logo-section h1 .app-logo {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
     margin-right: 10px;
 }
 
@@ -143,9 +137,12 @@ ul li {
     border: 1px solid #444;
 }
 
-.social-links a i {
-    font-size: 1.5em;
+.social-links a .social-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 .social-links a:hover {
