@@ -22,12 +22,15 @@ header {
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
+}
+
+.header-content > div {
+    margin: 0 auto;
 }
 
 .theme-toggle {
@@ -42,6 +45,10 @@ header {
     gap: 8px;
     font-family: 'Geologica', sans-serif;
     transition: all 0.3s ease;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .theme-toggle:hover {
