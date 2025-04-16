@@ -7,10 +7,11 @@ body {
 }
 
 header {
-    background-color: #ff2d55;
+    background-color: #333333;
     color: #fff;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #ff2d55;
 }
 
 .header-content {

@@ -33,6 +33,13 @@ header {
     margin: 0 auto;
 }
 
+.site-logo {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 .theme-toggle {
     background-color: transparent;
     border: 2px solid #fff;
