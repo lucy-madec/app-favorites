@@ -32,7 +32,15 @@ header {
     margin-bottom: 5px;
 }
 
-.logo-section h1 i {
+.logo-section h1 i.fa-music {
+    color: #FF0000;
+    margin-right: 5px;
+    font-size: 0.8em;
+    position: relative;
+    top: -2px;
+}
+
+.logo-section h1 i.fa-youtube {
     color: #FF0000;
     margin-right: 10px;
 }
