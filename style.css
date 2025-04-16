@@ -60,43 +60,203 @@ body.dark-theme header {
 }
 
 #applications {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
-    padding: 20px;
+    padding: 40px 20px;
     margin-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
 }
 
-article {
-    flex: 1;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
+.section-title {
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    position: relative;
+    color: #007bff;
 }
 
-body.dark-theme article {
-    background-color: #333;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-a{
+body.dark-theme .section-title {
+    color: #fff;
+}
+
+body.dark-theme .section-title:after {
+    background-color: #fff;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.app-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .app-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+.card-header.youtube-music {
+    background: linear-gradient(135deg, #FF0000 0%, #990000 100%);
+}
+
+.card-header.shazam {
+    background: linear-gradient(135deg, #08F 0%, #0055CC 100%);
+}
+
+.card-header.songkick {
+    background: linear-gradient(135deg, #F573A0 0%, #C41F3B 100%);
+}
+
+.app-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-logo {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 25px;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+body.dark-theme .app-card h2 {
+    color: #fff;
+}
+
+.app-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+body.dark-theme .app-card p {
+    color: #ccc;
+}
+
+.card-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.feature {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.feature i {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+body.dark-theme .feature {
+    background-color: #444;
+    color: #ddd;
+}
+
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     background-color: #007bff;
     color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 16px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
-a:hover{
-    background-color:darkblue;
-    transition: 0.3s ease;
+.card-button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.card-button:hover i {
+    transform: translateX(5px);
+}
+
+a:not(.card-button) {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:not(.card-button):hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+body.dark-theme a:not(.card-button) {
+    color: #4da3ff;
+}
+
+body.dark-theme a:not(.card-button):hover {
+    color: #80bdff;
 }
 
 footer {
